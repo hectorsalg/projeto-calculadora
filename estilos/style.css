@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -9,46 +11,106 @@
     --cor0: #767A99;
     --cor1: #50556E;
     --cor2: #333A58;
-    --cor3: #3C3E5D;
+    --cor2-5: #262a41;
+    --cor3: #43466d;
     --cor4: #FE3663;
+    --cor4-5: #c2294a;
+
+    --fonte1: 'Roboto', sans-serif;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte1);
     background-color: var(--cor0);
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    background-color: var(--cor1);
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+}
+#calculo{
+    height: 100px;
 }
 
 table{
+    border-spacing: 3px 3px;
     background-color: var(--cor1);
-    margin: auto;
-    width: 230px;
-    height: 300px;
     text-align: center;
+}
+
+table td{
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
 }
 
 .numero{
     background-color: var(--cor2);
     padding: 10px;
-    font-size: 2.5em;
-    font-weight: normal;
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    font-weight: bold;
     color: white;
 }
 
 .sinal{
     background-color: var(--cor3);
     padding: 10px;
+    width: 30px;
+    height: 30px;
     font-size: 1em;
-    font-weight: 100;
+    font-weight: bold;
+    color: var(--cor4);
+}
+
+.sinal-up{
+    background-color: var(--cor3);
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    font-weight: bold;
     color: var(--cor4);
 }
 
 #igual{
-    background-color: #FE3663;
+    background-color: var(--cor4);
     color: white;
 }
 
 #deletar{
     filter: invert(1);
+    padding-top: 5px;
     width: 20px;
     margin: auto;
+}
+
+#ponto{
+    text-align: center;
+    font-weight: bold;
+}
+
+.numero:hover{
+    background-color: var(--cor2-5);
+    transition: 0.17s;
+}
+
+.sinal:hover, .sinal-up:hover{
+    background-color: var(--cor2-5);
+    transition: 0.17s;
+}
+
+#igual:hover{
+    background-color: var(--cor4-5);
+    transition: 0.17s;
 }

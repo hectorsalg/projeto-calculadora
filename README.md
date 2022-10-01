@@ -1,2 +1,2 @@
 # projeto-calculadora
- Projeto Calculadora para 
+ Projeto Calculadora para portfólio

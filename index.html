@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css">
-    <script src=""></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="jscript/script.js"></script>
     <title>Minha Calculadora</title>
 </head>
@@ -16,33 +16,33 @@
         </div>
         <table>
             <tr>
-                <td class="sinal-up">C</td>
-                <td class="sinal-up">%</td>
-                <td class="sinal-up">/</td>
-                <td class="sinal-up">X</td>
+                <td id="limpar" class="sinal-up">C</td>
+                <td id="porcento" class="sinal-up">%</td>
+                <td id="dividir" class="sinal-up">/</td>
+                <td id="multiplicar" class="sinal-up">X</td>
             </tr>
             <tr>
-                <td class="numero">7</td>
-                <td class="numero">8</td>
-                <td class="numero">9</td>
-                <td class="sinal">-</td>
+                <td id="sete" class="numero">7</td>
+                <td id="oito" class="numero">8</td>
+                <td id="nome" class="numero">9</td>
+                <td id="menos" class="sinal">-</td>
             </tr>
             <tr>
-                <td class="numero">4</td>
-                <td class="numero">5</td>
-                <td class="numero">6</td>
-                <td class="sinal">+</td>
+                <td id="quatro" class="numero">4</td>
+                <td id="cinco" class="numero">5</td>
+                <td id="seis" class="numero">6</td>
+                <td id="mais" class="sinal">+</td>
             </tr>
             <tr>
-                <td class="numero">1</td>
-                <td class="numero">2</td>
-                <td class="numero">3</td>
-                <td class="sinal" rowspan="2" id="igual">=</td>
+                <td id="um" class="numero">1</td>
+                <td id="dois" class="numero">2</td>
+                <td id="tres" class="numero">3</td>
+                <td id="igual"class="sinal" rowspan="2">=</td>
             </tr>
             <tr>
-                <td class="numero">0</td>
-                <td class="numero" id="ponto">.</td>
-                <td class="numero"><img id="deletar" src="imagens/delete.svg" alt="deletar"></td>
+                <td id="zero" class="numero">0</td>
+                <td id="ponto" class="numero">.</td>
+                <td id="deletar" class="numero"><span class="material-symbols-outlined">backspace</span></td>
             </tr>
         </table>
     </div>

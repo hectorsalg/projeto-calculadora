@@ -61,6 +61,12 @@ table td{
     font-size: 1em;
     font-weight: bold;
     color: white;
+    cursor: pointer;
+}
+
+.numero:hover{
+    background-color: var(--cor2-5);
+    transition: 0.17s;
 }
 
 .sinal{
@@ -71,6 +77,12 @@ table td{
     font-size: 1em;
     font-weight: bold;
     color: var(--cor4);
+    cursor: pointer;
+}
+
+.sinal:hover, .sinal-up:hover{
+    background-color: var(--cor2-5);
+    transition: 0.17s;
 }
 
 .sinal-up{
@@ -81,6 +93,7 @@ table td{
     font-size: 1em;
     font-weight: bold;
     color: var(--cor4);
+    cursor: pointer;
 }
 
 #igual{
@@ -88,29 +101,17 @@ table td{
     color: white;
 }
 
+#igual:hover{
+    background-color: var(--cor4-5);
+    transition: 0.17s;
+}
+
 #deletar{
-    filter: invert(1);
-    padding-top: 5px;
-    width: 20px;
-    margin: auto;
+    padding-bottom: 4.5px;
+    width: 30px;
 }
 
 #ponto{
     text-align: center;
     font-weight: bold;
-}
-
-.numero:hover{
-    background-color: var(--cor2-5);
-    transition: 0.17s;
-}
-
-.sinal:hover, .sinal-up:hover{
-    background-color: var(--cor2-5);
-    transition: 0.17s;
-}
-
-#igual:hover{
-    background-color: var(--cor4-5);
-    transition: 0.17s;
 }

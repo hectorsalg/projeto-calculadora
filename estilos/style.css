@@ -62,29 +62,43 @@ body{
     padding: 0px 3px;
 }
 
-table{
-    border-spacing: 3px 3px;
-    background-color: var(--cor1);
-    text-align: center;
+.linha-meio{
+    margin-top: -21px;
 }
 
-table td{
-    text-shadow: 1px 1px 2px black;
-    border-radius: 5px;
+.linha-baixo{
+    margin-top: -28px;
 }
 
 .numero{
     background-color: var(--cor2);
     padding: 10px;
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     font-size: 1em;
     font-weight: bold;
     color: white;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 1px;
 }
 
-.numero:hover{
+.numero-sinal{
+    background-color: var(--cor2);
+    width: 44px;
+    height: 44px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 1px;
+    transform: translate(0px, 5px);
+}
+
+.numero:hover, .numero-sinal:hover{
     background-color: var(--cor2-5);
     transition: 0.17s;
 }
@@ -92,46 +106,38 @@ table td{
 .sinal{
     background-color: var(--cor3);
     padding: 10px;
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     font-size: 1em;
     font-weight: bold;
     color: var(--cor4);
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 1px;
 }
 
-.sinal:hover, .sinal-up:hover{
+.sinal:hover{
     background-color: var(--cor2-5);
     transition: 0.17s;
 }
 
-.sinal-up{
-    background-color: var(--cor3);
-    padding: 10px;
-    width: 30px;
-    height: 30px;
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--cor4);
-    cursor: pointer;
+#delet{
+    transform: translateY(2px);
 }
 
 #igual{
+    display: inline-block;
     background-color: var(--cor4);
+    width: 42px;
+    height: 90px;
     color: white;
+    border: none;
+    border-radius: 5px;
+    transform: translate(2px, 22px);
 }
 
 #igual:hover{
     background-color: var(--cor4-5);
     transition: 0.17s;
-}
-
-#deletar{
-    padding-bottom: 4.5px;
-    width: 30px;
-}
-
-#ponto{
-    text-align: center;
-    font-weight: bold;
 }

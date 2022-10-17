@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="jscript/script.js"></script>
     <title>Minha Calculadora</title>
 </head>
 <body>
@@ -19,37 +18,40 @@
             <div><span id="calcsinal">+</span></div>
             <div><span id="calresul">0</span></div>
         </div>
-        <table>
-            <tr>
-                <td id="limpar" class="sinal-up">C</td>
-                <td id="porcento" class="sinal-up">%</td>
-                <td id="dividir" class="sinal-up">/</td>
-                <td id="multiplicar" class="sinal-up">X</td>
-            </tr>
-            <tr>
-                <td id="sete" class="numero">7</td>
-                <td id="oito" class="numero">8</td>
-                <td id="nome" class="numero">9</td>
-                <td id="menos" class="sinal">-</td>
-            </tr>
-            <tr>
-                <td id="quatro" class="numero">4</td>
-                <td id="cinco" class="numero">5</td>
-                <td id="seis" class="numero">6</td>
-                <td id="mais" class="sinal">+</td>
-            </tr>
-            <tr>
-                <td id="um" class="numero">1</td>
-                <td id="dois" class="numero">2</td>
-                <td id="tres" class="numero">3</td>
-                <td id="igual"class="sinal" rowspan="2">=</td>
-            </tr>
-            <tr>
-                <td id="zero" class="numero">0</td>
-                <td id="ponto" class="numero">.</td>
-                <td id="deletar" class="numero"><span class="material-symbols-outlined">backspace</span></td>
-            </tr>
-        </table>
+        <div class="calc">
+            <div class="linha">
+                <button id="apagar" class="sinal" value="C">C</button>
+                <button id="porcento" class="sinal" value="%">%</button>
+                <button id="dividir" class="sinal" value="/">/</button>
+                <button id="multiplicar" class="sinal" value="X">X</button>
+            </div>
+            <div class="linha">
+                <button id="sete" class="numero" value="7">7</button>
+                <button id="oito" class="numero" value="8">8</button>
+                <button id="nove" class="numero" value="9">9</button>
+                <button id="menos" class="sinal" value="-">-</button>
+            </div>
+            <div class="linha">
+                <button id="quatro" class="numero" value="4">4</button>
+                <button id="cinco" class="numero" value="5">5</button>
+                <button id="seis" class="numero" value="6">6</button>
+                <button id="mais" class="sinal" value="+">+</button>
+            </div>
+            <div class="linha-meio">
+                <button class="numero" value="1">1</button>
+                <button class="numero" value="2">2</button>
+                <button class="numero" value="3">3</button>
+                <button id="igual" value="=">=</button>
+                
+            </div>
+            <div class="linha-baixo">
+                <button class="numero" value="0">0</button>
+                <button class="numero" value=".">.</button>
+                <button class="numero-sinal"><span id="delet" class="material-symbols-outlined">backspace</span></button>
+                <!-- <button id="igual" value="-">=</button> -->
+            </div>
+        </div>
     </div>
+    <script src="jscript/script.js"></script>
 </body>
 </html>

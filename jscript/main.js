@@ -38,6 +38,8 @@ function inserir(valor) {
 function sinal(valor) {
     let calcsin = valor
     res.innerHTML = 0
+    flag3 = false
+
     if (calc1.innerHTML != 0) {
         flag1 = true // já é possivel alterar o segundo valor do calcnum
         if (flag2 == true) { 
@@ -64,25 +66,28 @@ function apagar() {
 
     if (flag1 == false) {
         if (calc1.innerHTML != 0) {
-            calc1.innerHTML = Math.floor(borracha1/10)
+            calc1.innerHTML = borracha1.slice(0, -1)
+            res.innerHTML = borracha1.slice(0, -1)
         }
     } else {
         if (calc2.innerHTML != 0) {
-            calc2.innerHTML = Math.floor(borracha2/10)
+            calc2.innerHTML = borracha2.slice(0, -1)
+            res.innerHTML = borracha2.slice(0, -1)
         }
     }
 }
 
 function porcento() {
-    let cento = calc2.innerHTML
+    let cento1 = calc2.innerHTML
+    let cento2 = calc2.innerHTML
 
     if (flag1 == false) {
         if (calc1.innerHTML != 0) {
-            calc1.innerHTML = 0
+            calc1.innerHTML = cento1/100
         }
     } else {
         if (calc2.innerHTML != 0) {
-            calc2.innerHTML = cento/100
+            calc2.innerHTML = cento2/100
         }
     }
 }
@@ -95,6 +100,7 @@ function calcular() {
 
     flag1 = true
     flag2 = true
+    flag3 = false
 
     if (sin == '+') {
         resul = Number(num1) + Number(num2)
@@ -145,6 +151,23 @@ function calcular() {
         sin2.innerHTML = ''
         if (resul == 0) {
             flag1 = false
+        }
+    }
+}
+
+function pontuar(valor) {
+    let ponto = valor
+    if (flag1 == false) {
+        if (calc1.innerHTML != 0 && res.innerHTML.indexOf('.') == -1) {
+            calc1.innerHTML += ponto
+            res.innerHTML += ponto
+            flag2 = true
+        }
+    } else {
+        if (calc2.innerHTML != 0 && res.innerHTML.indexOf('.') == -1) {
+            calc2.innerHTML += ponto
+            res.innerHTML += ponto
+            flag2 = false
         }
     }
 }

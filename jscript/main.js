@@ -41,6 +41,9 @@ function sinal(valor) {
 }
 
 function limpar() {
+    flag1 = false
+    flag2 = false
+    
     calc1.innerHTML = 0
     sin1.innerHTML = '+'
     calc2.innerHTML = 0
@@ -114,5 +117,12 @@ function calcular() {
         sin1.innerHTML = '+'
         calc2.innerHTML = 0
         sin2.innerHTML = ''
-    } 
+    } else {
+        resul = Number(num1) + Number(num2)
+        res.innerHTML = resul
+        calc1.innerHTML = resul
+        sin1.innerHTML = '+'
+        calc2.innerHTML = 0
+        sin2.innerHTML = ''
+    }
 }

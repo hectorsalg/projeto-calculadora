@@ -13,47 +13,46 @@
     <div class="container">
         <div id="calculo01">
             <div>
-                <span id="calcnum1">0</span> <span id="calcsinal">+</span> <span id="calcnum2">0</span>
+                <span id="calcnum1">0</span> <span id="calcsinal1">+</span> <span id="calcnum2">0</span>
             </div>
         </div>
         <div id="calculo02">
-            <div><span id="calcsinal">+</span></div>
-            <div><span id="calresul">0</span></div>
+            <div><span id="calcsinal2"></span></div>
+            <div><span id="calcresul">0</span></div>
         </div>
         <div class="calc">
             <div class="linha">
-                <button id="apagar" class="sinal" value="C" onclick="sinal()">C</button>
-                <button id="porcento" class="sinal" value="%" onclick="sinal()">%</button>
-                <button id="dividir" class="sinal" value="/" onclick="sinal()">/</button>
-                <button id="multiplicar" class="sinal" value="X" onclick="sinal()">X</button>
+                <button class="sinal" onclick="limpar()">C</button>
+                <button class="sinal" value="%" onclick="porcento()">%</button>
+                <button class="sinal" value="/" onclick="sinal(value)">/</button>
+                <button class="sinal" value="x" onclick="sinal(value)">X</button>
             </div>
             <div class="linha">
-                <button id="sete" class="numero" value="7" onclick="inserir7()">7</button>
-                <button id="oito" class="numero" value="8" onclick="inserir8()">8</button>
-                <button id="nove" class="numero" value="9" onclick="inserir9()">9</button>
-                <button id="menos" class="sinal" value="-">-</button>
+                <button class="numero" value="7" onclick="inserir(value)">7</button>
+                <button class="numero" value="8" onclick="inserir(value)">8</button>
+                <button class="numero" value="9" onclick="inserir(value)">9</button>
+                <button class="sinal" value="-" onclick="sinal(value)">-</button>
             </div>
             <div class="linha">
-                <button id="quatro" class="numero" value="4" onclick="inserir4()">4</button>
-                <button id="cinco" class="numero" value="5" onclick="inserir5()">5</button>
-                <button id="seis" class="numero" value="6" onclick="inserir6()">6</button>
-                <button id="mais" class="sinal" value="+" onclick="sinal()">+</button>
+                <button class="numero" value="4" onclick="inserir(value)">4</button>
+                <button class="numero" value="5" onclick="inserir(value)">5</button>
+                <button class="numero" value="6" onclick="inserir(value)">6</button>
+                <button class="sinal" value="+" onclick="sinal(value)">+</button>
             </div>
             <div class="linha-meio">
-                <button id="um" class="numero" value="1" onclick="inserir1()">1</button>
-                <button id="dois" class="numero" value="2" onclick="inserir2()">2</button>
-                <button id="tres" class="numero" value="3" onclick="inserir3()">3</button>
-                <button id="igual" value="=" onclick="sinal()">=</button>
+                <button class="numero" value="1" onclick="inserir(value)">1</button>
+                <button class="numero" value="2" onclick="inserir(value)">2</button>
+                <button class="numero" value="3" onclick="inserir(value)">3</button>
+                <button id="igual" onclick="calcular()">=</button>
                 
             </div>
             <div class="linha-baixo">
-                <button id="zero" class="numero" value="0" onclick="inserir0()">0</button>
-                <button class="numero" value="." onclick="sinal()">.</button>
-                <button class="numero-sinal" onclick="sinal()"><span id="delet" class="material-symbols-outlined">backspace</span></button>
-                <!-- <button id="igual" value="-">=</button> -->
+                <button class="numero" value="0" onclick="inserir(value)">0</button>
+                <button class="numero" value="." onclick="inserir(value)">.</button>
+                <button class="numero-sinal" onclick="apagar()"><span id="delet" class="material-symbols-outlined">backspace</span></button>
             </div>
         </div>
     </div>
-    <script src="jscript/inserir.js"></script>
+    <script src="jscript/main.js"></script>
 </body>
 </html>

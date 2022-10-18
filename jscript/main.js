@@ -11,19 +11,25 @@ function inserir(valor) {
     if (flag1 == false) {
         if (calc1.innerHTML != 0) {
             calc1.innerHTML += num
+            res.innerHTML += num
             flag2 = true
         } else {
             calc1.innerHTML = ''
             calc1.innerHTML += num
+            res.innerHTML = ''
+            res.innerHTML += num
             flag2 = true
         }
     } else {
         if (calc2.innerHTML != 0) {
             calc2.innerHTML += num
+            res.innerHTML += num
             flag2 = false
         } else {
             calc2.innerHTML = ''
             calc2.innerHTML += num
+            res.innerHTML = ''
+            res.innerHTML += num
             flag2 = false
         }
     }
@@ -31,6 +37,7 @@ function inserir(valor) {
 
 function sinal(valor) {
     let calcsin = valor
+    res.innerHTML = 0
     if (calc1.innerHTML != 0) {
         flag1 = true // já é possivel alterar o segundo valor do calcnum
         if (flag2 == true) { 

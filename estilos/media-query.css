@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 992px) {
+
+    .container {
+        width: 500px;
+    }
+
+    #calculo01{
+        display: flex;
+        justify-content: center;
+    }
+
+    #calculo01 > span {
+        padding: 5px;
+    }
+
+    .calc {
+        transform: translateX(4%);
+    }
+
+    #igual{
+        width: 22%;
+        margin: 1px 6px;
+        height: 39%;
+    }
+    
+}

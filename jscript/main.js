@@ -12,6 +12,9 @@ function inserir(valor) {
         if (calc1.innerHTML != 0) {
             calc1.innerHTML += num
             res.innerHTML += num
+            if (res.style.overflow == 'auto') {
+                alert('número muito grande')
+            }
             flag2 = true
         } else {
             calc1.innerHTML = ''
@@ -38,7 +41,6 @@ function inserir(valor) {
 function sinal(valor) {
     let calcsin = valor
     res.innerHTML = 0
-    flag3 = false
 
     if (calc1.innerHTML != 0) {
         flag1 = true // já é possivel alterar o segundo valor do calcnum
@@ -84,10 +86,12 @@ function porcento() {
     if (flag1 == false) {
         if (calc1.innerHTML != 0) {
             calc1.innerHTML = cento1/100
+            res.innerHTML = cento1/100
         }
     } else {
         if (calc2.innerHTML != 0) {
             calc2.innerHTML = cento2/100
+            res.innerHTML = cento2/100
         }
     }
 }
@@ -100,7 +104,6 @@ function calcular() {
 
     flag1 = true
     flag2 = true
-    flag3 = false
 
     if (sin == '+') {
         resul = Number(num1) + Number(num2)

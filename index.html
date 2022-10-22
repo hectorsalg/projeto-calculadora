@@ -5,52 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mobile-first.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Minha Calculadora</title>
 </head>
 <body>
     <div class="container">
         <div id="calculo01">
-            <div>
                 <span id="calcnum1">0</span> <span id="calcsinal1">+</span> <span id="calcnum2">0</span>
-            </div>
         </div>
         <div id="calculo02">
-            <div><span id="calcsinal2"></span></div>
-            <div><span id="calcresul">0</span></div>
+            <span id="calcsinal2"></span>
+            <span id="calcresul">0</span>
         </div>
         <div class="calc">
-            <div class="linha">
-                <button class="sinal" onclick="limpar()">C</button>
-                <button class="sinal" value="%" onclick="porcento()">%</button>
-                <button class="sinal" value="/" onclick="sinal(value)">/</button>
-                <button class="sinal" value="x" onclick="sinal(value)">X</button>
-            </div>
-            <div class="linha">
-                <button class="numero" value="7" onclick="inserir(value)">7</button>
-                <button class="numero" value="8" onclick="inserir(value)">8</button>
-                <button class="numero" value="9" onclick="inserir(value)">9</button>
-                <button class="sinal" value="-" onclick="sinal(value)">-</button>
-            </div>
-            <div class="linha">
-                <button class="numero" value="4" onclick="inserir(value)">4</button>
-                <button class="numero" value="5" onclick="inserir(value)">5</button>
-                <button class="numero" value="6" onclick="inserir(value)">6</button>
-                <button class="sinal" value="+" onclick="sinal(value)">+</button>
-            </div>
-            <div class="linha-meio">
-                <button class="numero" value="1" onclick="inserir(value)">1</button>
-                <button class="numero" value="2" onclick="inserir(value)">2</button>
-                <button class="numero" value="3" onclick="inserir(value)">3</button>
-                <button id="igual" onclick="calcular()">=</button>
-                
-            </div>
-            <div class="linha-baixo">
-                <button class="numero" value="0" onclick="inserir(value)">0</button>
-                <button class="numero" value="." onclick="pontuar(value)">.</button>
-                <button class="numero-sinal" onclick="apagar()"><span id="delet" class="material-symbols-outlined">backspace</span></button>
-            </div>
+                <div>
+                    <button class="sinal" onclick="limpar()">C</button>
+                    <button class="sinal" value="%" onclick="porcento()">%</button>
+                    <button class="sinal" value="/" onclick="sinal(value)">/</button>
+                    <button class="sinal" value="x" onclick="sinal(value)">X</button>
+                </div>
+                <div>
+                    <button class="numero" value="7" onclick="inserir(value)">7</button>
+                    <button class="numero" value="8" onclick="inserir(value)">8</button>
+                    <button class="numero" value="9" onclick="inserir(value)">9</button>
+                    <button class="sinal" value="-" onclick="sinal(value)">-</button>
+                </div>
+                <div>
+                    <button class="numero" value="4" onclick="inserir(value)">4</button>
+                    <button class="numero" value="5" onclick="inserir(value)">5</button>
+                    <button class="numero" value="6" onclick="inserir(value)">6</button>
+                    <button class="sinal" value="+" onclick="sinal(value)">+</button>
+                </div>
+                <div>
+                    <button class="numero" value="1" onclick="inserir(value)">1</button>
+                    <button class="numero" value="2" onclick="inserir(value)">2</button>
+                    <button class="numero" value="3" onclick="inserir(value)">3</button>
+                    <button id="igual" onclick="calcular()">=</button>
+                </div>
+                <div>
+                    <button class="numero" value="0" onclick="inserir(value)">0</button>
+                    <button class="numero" value="." onclick="pontuar(value)">.</button>
+                    <button id="delet" onclick="apagar()"><span id="delimg" class="material-symbols-outlined">backspace</span></button>
+                </div>
         </div>
     </div>
     <script src="jscript/main.js"></script>

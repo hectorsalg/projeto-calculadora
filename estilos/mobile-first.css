@@ -5,6 +5,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 :root{
@@ -24,6 +25,7 @@ body{
     background-color: var(--cor0);
     width: 100vw;
     height: 100vh;
+    user-select: none;
 }
 
 .container{
@@ -33,6 +35,8 @@ body{
     transform: translate(-50%, -50%);
 
     width: 200px;
+    transition: width .3s;
+    transition-timing-function: ease;
     background-color: var(--cor1);
     padding: 3px;
     border-radius: 5px;
@@ -40,43 +44,38 @@ body{
 }
 
 #calculo01{
+    overflow: auto;
     color: rgba(255, 255, 255, 0.404);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.411);
     font-weight: bolder;
     font-size: 1.3em;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     padding: 0px 3px;
 }
 
 #calculo02{
-    height: 70px;
+    overflow: auto;
+    height: 100px;
     color: rgba(255, 255, 255, 0.842);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.411);
-    font-weight: bolder;
     font-size: 2.8em;
+    font-weight: bolder;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 0px 3px;
 }
 
-.linha-meio{
-    margin-top: -21px;
-}
-
-.linha-baixo{
-    margin-top: -28px;
+.calc{
+    position: relative;
 }
 
 .numero{
     background-color: var(--cor2);
     padding: 10px;
-    width: 44px;
-    height: 44px;
+    width: 22%;
     font-size: 1em;
     font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.354);
     color: white;
     cursor: pointer;
     border: none;
@@ -84,21 +83,7 @@ body{
     margin: 1px;
 }
 
-.numero-sinal{
-    background-color: var(--cor2);
-    width: 44px;
-    height: 44px;
-    font-size: 1em;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    margin: 1px;
-    transform: translate(0px, 5px);
-}
-
-.numero:hover, .numero-sinal:hover{
+.numero:hover{
     background-color: var(--cor2-5);
     transition: 0.17s;
 }
@@ -106,8 +91,7 @@ body{
 .sinal{
     background-color: var(--cor3);
     padding: 10px;
-    width: 44px;
-    height: 44px;
+    width: 22%;
     font-size: 1em;
     font-weight: bold;
     color: var(--cor4);
@@ -123,18 +107,31 @@ body{
 }
 
 #delet{
-    transform: translateY(2px);
-}
-
-#igual{
-    display: inline-block;
-    background-color: var(--cor4);
-    width: 42px;
-    height: 90px;
+    background-color: var(--cor2);
     color: white;
     border: none;
     border-radius: 5px;
-    transform: translate(2px, 22px);
+    width: 22%;
+    height: 19%;
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 5px;
+}
+
+#delet:hover{
+    background-color: var(--cor2-5);
+    transition: 0.17s;
+}
+
+#igual{
+    background-color: var(--cor4);
+    width: 22%;
+    margin: 1px 6px;
+    height: 39%;
+    position: absolute;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
 #igual:hover{

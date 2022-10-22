@@ -48,6 +48,9 @@ body{
     color: rgba(255, 255, 255, 0.404);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.411);
     font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
     font-size: 1.3em;
     padding: 0px 3px;
 }

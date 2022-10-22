@@ -80,7 +80,7 @@ function apagar() {
 }
 
 function porcento() {
-    let cento1 = calc2.innerHTML
+    let cento1 = calc1.innerHTML
     let cento2 = calc2.innerHTML
 
     if (flag1 == false) {

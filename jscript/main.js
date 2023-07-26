@@ -136,15 +136,24 @@ function calcular() {
             flag1 = false
         }
     } else if (sin == '/') {
-        resul = Number(num1) / Number(num2)
-        res.innerHTML = resul
-        calc1.innerHTML = resul
-        sin1.innerHTML = '+'
-        calc2.innerHTML = 0
-        sin2.innerHTML = ''
-        if (resul == 0) {
-            flag1 = false
+        if(Number(num2) == 0) {
+            resul = 0
+            calc1.innerHTML = resul
+            sin1.innerHTML = '+'
+            calc2.innerHTML = 0
+            sin2.innerHTML = ''
+            if (resul == 0) {
+                flag1 = false
+            }
+        } else {
+            resul = Number(num1) / Number(num2)
+            res.innerHTML = resul
+            calc1.innerHTML = resul
+            sin1.innerHTML = '+'
+            calc2.innerHTML = 0
+            sin2.innerHTML = ''
         }
+        
     } else {
         resul = Number(num1) + Number(num2)
         res.innerHTML = resul
